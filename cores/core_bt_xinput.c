@@ -210,10 +210,14 @@ void xinput_bt_sendinput_task(void * param)
         xi_input.analog_trigger_l   = hoja_analog_data.lt_a << 4;
         xi_input.analog_trigger_r   = hoja_analog_data.rt_a << 4;
 
+        xi_input.button_stick_l     = hoja_processed_buttons.button_stick_left;
+        xi_input.button_stick_r     = hoja_processed_buttons.button_stick_right;
+
         xi_input.bumper_l           = hoja_processed_buttons.trigger_l;
         xi_input.bumper_r           = hoja_processed_buttons.trigger_r;
 
         xi_input.button_back        = hoja_processed_buttons.button_select;
+        xi_input.button_guide       = hoja_processed_buttons.button_home;
         xi_input.button_menu        = hoja_processed_buttons.button_start;
 
         xi_input.button_a           = hoja_processed_buttons.button_down;
